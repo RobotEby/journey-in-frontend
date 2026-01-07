@@ -1,0 +1,15 @@
+{
+  "name": "field-validator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite --open"
+  },
+  "author": "Kerlon Amaral",
+  "license": "ISC",
+  "description": "A simple field validator using Vite and Validator.js",
+  "dependencies": {
+    "validator": "^13.15.26",
+    "vite": "^7.3.1"
+  }
+}

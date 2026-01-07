@@ -1,0 +1,16 @@
+{
+  "name": "select-pet",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "author": "Kerlon Amaral",
+  "license": "ISC",
+  "description": "A simple project to select a pet from a list using Vite as the build tool. ",
+  "dependencies": {
+    "vite": "^7.3.1"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "super-heroes-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "author": "Kerlon Amaral",
+  "license": "ISC",
+  "description": "A simple project that consumes the Super Heroes API and displays a list of superheroes with their images and names.",
+  "dependencies": {
+    "sweetalert2": "^11.26.17",
+    "vite": "^7.3.1"
+  }
+}

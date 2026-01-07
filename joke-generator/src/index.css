@@ -1,0 +1,165 @@
+/* ===========================
+   Design System
+   =========================== */
+:root {
+  --bg-dark: #0f1220;
+  --bg-light: #f8fafc;
+
+  --surface-dark: #171a2b;
+  --surface-light: #ffffff;
+
+  --primary: #6366f1;
+  --primary-hover: #4f46e5;
+
+  --text-dark: rgba(255, 255, 255, 0.92);
+  --text-light: #0f172a;
+
+  --muted-dark: rgba(255, 255, 255, 0.6);
+  --muted-light: #64748b;
+
+  --border-dark: rgba(255, 255, 255, 0.08);
+  --border-light: #e5e7eb;
+
+  --radius: 14px;
+  --transition: 0.25s ease;
+}
+
+/* ===========================
+   Reset + Base
+   =========================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(180deg, var(--bg-dark), #090b16);
+  color: var(--text-dark);
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===========================
+   Tipografia
+   =========================== */
+h1 {
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+p {
+  color: var(--muted-dark);
+  line-height: 1.7;
+}
+
+/* ===========================
+   Links
+   =========================== */
+a {
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+
+  padding: 0.75em 1.6em;
+  border-radius: var(--radius);
+
+  border: 1px solid var(--border-dark);
+  background: linear-gradient(180deg, #1b1f36, #13162a);
+  color: var(--text-dark);
+
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition),
+    background var(--transition), border-color var(--transition);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+button:focus-visible {
+  outline: 3px solid rgba(99, 102, 241, 0.6);
+  outline-offset: 3px;
+}
+
+.container {
+  background: var(--surface-dark);
+  padding: 32px;
+  border-radius: 18px;
+  border: 1px solid var(--border-dark);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  animation: fadeUp 0.6s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background: linear-gradient(180deg, #f1f5f9, var(--bg-light));
+    color: var(--text-light);
+  }
+
+  p {
+    color: var(--muted-light);
+  }
+
+  .container {
+    background: var(--surface-light);
+    border: 1px solid var(--border-light);
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+  }
+
+  button {
+    background: linear-gradient(180deg, #ffffff, #f1f5f9);
+    color: var(--text-light);
+    border-color: var(--border-light);
+  }
+
+  button:hover {
+    box-shadow: 0 12px 30px rgba(99, 102, 241, 0.25);
+  }
+}

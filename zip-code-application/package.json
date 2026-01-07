@@ -1,0 +1,30 @@
+{
+  "name": "zip-code-application",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "esbuild": "^0.15.18",
+    "esbuild-linux-64": "^0.15.18",
+    "function-bind": "^1.1.2",
+    "hasown": "^2.0.2",
+    "is-core-module": "^2.16.1",
+    "nanoid": "^3.3.11",
+    "path-parse": "^1.0.7",
+    "picocolors": "^1.1.1",
+    "postcss": "^8.5.6",
+    "resolve": "^1.22.11",
+    "rollup": "^2.79.2",
+    "source-map-js": "^1.2.1",
+    "supports-preserve-symlinks-flag": "^1.0.0",
+    "sweetalert2": "^11.26.17",
+    "vite": "^3.2.11"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "author": "Kerlon Amaral",
+  "license": "ISC",
+  "description": "A simple application to search for address information using zip codes (CEPs) in Brazil."
+}
